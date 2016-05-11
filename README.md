@@ -23,7 +23,7 @@ Edit your .bashrc or .zshrc script using the editor of your choice
 
 add the following line to the end of the file (keeping the parens)
 
-    (cd ~/.ACommitADay; ./GitCommitTracker.sh;)
+    (cd ~/.ACommitADay/scripts; ./GitCommitTracker.sh;)
 
 save and exit
 
