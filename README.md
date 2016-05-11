@@ -8,33 +8,26 @@ Prerequisites
 ---------------------
 
 * Unix-based operating system (OS X or Linux)
-
 * git
-
 * Tested in Zsh
 
-Basic Installation
+Installation
 ---------------------
 
-Download and save the scripts to a memorable location (hereto referred to as "/path/to/scripts" )
+Download and save the scripts to a memorable location (hereto referred to as `/path/to/scripts` )
 
-Open terminal
-    ctrl+alt+t
+Open terminal `ctrl+alt+t`
 
-Edit your .bashrc or .zshrc script
-    gedit .bashrc
-
-or
-    gedit .zshrc
+Edit your .bashrc or .zshrc script using the editor of your choice
+    `gedit .bashrc` or `gedit .zshrc`
 
 add the following line to the end of the file (keeping the parens)
 
     (cd /path/to/scripts; ./GitCommitTracker.sh;)
 
-
 save and exit
 
-cd into /path/to/scripts and make the two main scripts executable
+cd into `/path/to/scripts` and make the two main scripts executable
 
     chmod +x listRepos.sh
 
