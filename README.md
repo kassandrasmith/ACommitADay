@@ -7,11 +7,11 @@ An in-shell reminder to make your daily commit
 Prerequisites
 ---------------------
 
-Unix-based operating system (OS X or Linux)
+* Unix-based operating system (OS X or Linux)
 
-Works best in Zsh
+* git
 
-git should be installed
+* Tested in Zsh
 
 Basic Installation
 ---------------------
@@ -19,30 +19,30 @@ Basic Installation
 Download and save the scripts to a memorable location (hereto referred to as "/path/to/scripts" )
 
 Open terminal
->ctrl+alt+t
+    ctrl+alt+t
 
 Edit your .bashrc or .zshrc script
->gedit .bashrc
+    gedit .bashrc
 
 or
->gedit .zshrc
+    gedit .zshrc
 
 add the following line to the end of the file (keeping the parens)
 
->(cd /path/to/scripts; ./GitCommitTracker.sh;)
+    (cd /path/to/scripts; ./GitCommitTracker.sh;)
 
 
 save and exit
 
 cd into /path/to/scripts and make the two main scripts executable
 
->chmod +x listRepos.sh
+    chmod +x listRepos.sh
 
->chmod +x GitCommitTracker.sh
+    chmod +x GitCommitTracker.sh
 
 Run the listRepos to generate a file with all of the git repositories on your machine.
 
->./listRepos.sh
+    ./listRepos.sh
 
 :boom: When running listRepos, empty or broken repositories will have a "fatal" warning message and must be dealt with. Therefore it's also recommended that you run listRepos anytime you create a new repository to ensure that it is being properly tracked.
 
@@ -53,6 +53,11 @@ Changing the Message
 
 The messages can be changed by changing these lines
 
-![Changing the message](https://raw.githubusercontent.com/kassandrasmith/ACommitADay/master/meta/WhattoChange.png)
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+    echo "You still need to commit!"; #feel free to change me!
+    
+
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+    echo "You've committed today."; #feel free to change me!
 
 to your preferred messages. These lines are easily found by either looking for or searching for the consecutive bangs (!!!!)
