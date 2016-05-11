@@ -45,12 +45,11 @@ Changing the Message
 ---------------------
 
 The messages can be changed by changing these lines
+````sh
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+echo "You still need to commit!"; #feel free to change me!
 
-    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-    echo "You still need to commit!"; #feel free to change me!
-    
-
-    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-    echo "You've committed today."; #feel free to change me!
-
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+echo "You've committed today."; #feel free to change me!
+````
 to your preferred messages. These lines are easily found by either looking for or searching for the consecutive bangs (!!!!)
