@@ -16,7 +16,15 @@ cd
   # echo "$line";
 #compensate for the .git at the end
   cd ..
-  LOG_DATE=$(git log -1 HEAD --pretty=format:"%cd" --date=short)
+  LOG_DATE=$(git log  -1 -- HEAD --pretty=format:"%cd" --date=short)
+  error=${?}
+  # echo $?
+  # echo $error
+
+
+  if [[ error -eq 1 ]]; then
+    data=''
+  fi
 
 echo "$data"
 done
