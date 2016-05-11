@@ -14,7 +14,9 @@ Prerequisites
 Installation
 ---------------------
 
-Download and save the scripts to a memorable location (hereto referred to as `/path/to/scripts` )
+Clone the repository
+
+`git clone https://github.com/kassandrasmith/ACommitADay.git ~/.ACommitADay` 
 
 Open terminal `ctrl+alt+t`
 
@@ -23,14 +25,14 @@ Edit your .bashrc or .zshrc script using the editor of your choice
 
 add the following line to the end of the file (keeping the parens)
 
-    (cd /path/to/scripts; ./GitCommitTracker.sh;)
+    (cd ~/.ACommitADay; ./GitCommitTracker.sh;)
 
 save and exit
 
-cd into `/path/to/scripts` and make the two main scripts executable
+Make the two main scripts executable:
 
+    cd ~/.ACommitADay
     chmod +x listRepos.sh
-
     chmod +x GitCommitTracker.sh
 
 Run the listRepos to generate a file with all of the git repositories on your machine.
