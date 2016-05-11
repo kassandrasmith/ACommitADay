@@ -16,9 +16,7 @@ Installation
 
 Clone the repository
 
-`git clone https://github.com/kassandrasmith/ACommitADay.git ~/.ACommitADay` 
-
-Open terminal `ctrl+alt+t`
+    git clone https://github.com/kassandrasmith/ACommitADay.git ~/.ACommitADay
 
 Edit your .bashrc or .zshrc script using the editor of your choice
     `gedit .bashrc` or `gedit .zshrc`
