@@ -1,6 +1,8 @@
 ACommitADay
 ====================
 An in-shell reminder to make your daily commit
+![ACommitADay Screenshot](https://raw.githubusercontent.com/kassandrasmith/ACommitADay/master/meta/Screenshot.png)
+
 
 Prerequisites
 ---------------------
