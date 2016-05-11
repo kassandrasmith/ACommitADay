@@ -29,7 +29,7 @@ save and exit
 
 Make the two main scripts executable:
 
-    cd ~/.ACommitADay
+    cd ~/.ACommitADay/scripts
     chmod +x listRepos.sh
     chmod +x GitCommitTracker.sh
 
