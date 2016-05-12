@@ -1,14 +1,15 @@
 #!/bin/bash
 committedToday=false;
 #find all git repositories and put them into this text file
-find ~ -name .git -type d -prune 2>/dev/null  > RepositoryDirectory.txt
 
-#add globbers for files with a newline
-awk '{gsub(/ /,"\\ ")}8' RepositoryDirectory.txt > gits.txt
+# find ~ -name .git -type d -prune 2>/dev/null  > RepositoryDirectory.txt
+#
+# #add globbers for files with a newline
+# awk '{gsub(/ /,"\\ ")}8' RepositoryDirectory.txt > gits.txt
 
 #Don't break on whitespaces
 IFS=''
-cat gits.txt |
+cat ~/goodgits.txt |
 (while read data
 do
 
