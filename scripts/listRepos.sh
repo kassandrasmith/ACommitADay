@@ -18,7 +18,7 @@ cd
   cd ..
   LOG_DATE=$(git log  -1 -- HEAD --pretty=format:"%cd" --date=short)
   error=${?}
-  echo $error
+#  echo $error
 
   if [[ $error -ne 0 ]]; then
     echo "$data" >> ~/BrokenRepos.txt
@@ -26,10 +26,10 @@ cd
 
 done
 
-echo heko
-
 cd
 
 grep -v -x -f ~/BrokenRepos.txt ~/gits.txt > ~/goodgits.txt
 rm ~/BrokenRepos.txt
 rm ~/gits.txt
+
+echo All Done! Repositories listed in RepositoryDirectory.txt
