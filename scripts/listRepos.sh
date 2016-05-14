@@ -22,6 +22,7 @@ cd
 
   if [[ $error -ne 0 ]]; then
     echo "$data" >> ~/BrokenRepos.txt
+    echo $data produced an error and is being ignored
   fi
 
 done

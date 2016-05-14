@@ -62,6 +62,7 @@ cd #not necessary, but a safeguard to get to root
   if [[ "$StartDate" -eq "$FinalDate" ]];
   then
           committedToday=true;
+          whereCommit=$data
    fi;
 done
 
@@ -71,6 +72,7 @@ if [ "$committedToday" = false ] ; then
     echo "You still need to commit!"; #feel free to change me!
   else
     #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-    echo "You've committed today."; #feel free to change me!
+    echo "You've committed today" # "to" $whereCommit #feel free to change me!
+
 fi
 )
