@@ -31,4 +31,4 @@ grep -v -x -f ~/BrokenRepos.txt gits.txt > RepositoryDirectory.txt
 rm ~/BrokenRepos.txt
 rm gits.txt
 
-echo All Done! Working epositories listed in RepositoryDirectory.txt
+echo All Done! Working repositories listed in RepositoryDirectory.txt
