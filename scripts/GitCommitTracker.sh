@@ -28,8 +28,8 @@ cd #not necessary, but a safeguard to get to root
   elif [[ "$OSTYPE" == "darwin"* ]]; then
           # Mac OSX
             DATE=$(date +%Y-%m-%d) &> /dev/null #Silence date output
-            StartDate=$(date -jf "%Y-%m-%d" "$DATE" "+%s")
-            FinalDate=$(date -jf "%Y-%m-%d" "$LOG_DATE" "+%s")
+            StartDate=$(date -jf "%Y-%m-%d" "$DATE" +"%s")
+            FinalDate=$(date -jf "%Y-%m-%d" "$LOG_DATE" +"%s")
 
 
   elif [[ "$OSTYPE" == "cygwin" ]]; then
@@ -52,8 +52,8 @@ cd #not necessary, but a safeguard to get to root
   elif [[ "$OSTYPE" == "freebsd"* ]]; then
           # ...
           DATE=$(date +%Y-%m-%d) &> /dev/null #Silence date output
-          StartDate=$(date -jf "%Y-%m-%d" "$DATE" "+%s")
-          FinalDate=$(date -jf "%Y-%m-%d" "$LOG_DATE" "+%s")
+          StartDate=$(date -jf "%Y-%m-%d" "$DATE" +"%s")
+          FinalDate=$(date -jf "%Y-%m-%d" "$LOG_DATE" +"%s")
   else
           # Unknown.
           echo
