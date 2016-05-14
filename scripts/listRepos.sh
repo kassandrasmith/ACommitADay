@@ -2,12 +2,12 @@
 #Simple script lists the repositories on your machine
 find ~ -name .git -type d -prune 2>/dev/null  > RepositoryDirectory.txt
 #add globbers for files with a newline
-awk '{gsub(/ /,"\\ ")}8' RepositoryDirectory.txt > ~/gits.txt
+awk '{gsub(/ /,"\\ ")}8' RepositoryDirectory.txt > gits.txt
 
 #Don't break on whitespaces
 IFS=''
-cat ~/gits.txt |
-while read data
+cat gits.txt |
+(while read data
 do
 #not necessary, but a safeguard to get to root
 cd
@@ -25,11 +25,10 @@ cd
   fi
 
 done
+)
 
-cd
-
-grep -v -x -f ~/BrokenRepos.txt ~/gits.txt > ~/goodgits.txt
+grep -v -x -f ~/BrokenRepos.txt gits.txt > RepositoryDirectory.txt
 rm ~/BrokenRepos.txt
-rm ~/gits.txt
+rm gits.txt
 
-echo All Done! Repositories listed in RepositoryDirectory.txt
+echo All Done! Working epositories listed in RepositoryDirectory.txt

@@ -9,7 +9,7 @@ committedToday=false;
 
 #Don't break on whitespaces
 IFS=''
-cat ~/goodgits.txt |
+cat RepositoryDirectory.txt |
 (while read data
 do
 
