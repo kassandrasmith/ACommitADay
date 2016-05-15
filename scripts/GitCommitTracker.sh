@@ -69,10 +69,12 @@ done
 
 if [ "$committedToday" = false ] ; then
     #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-    echo "You still need to commit!"; #feel free to change me!
+    echo $(sed -n '2p' < ~/.Message.txt)
+    # echo "You still need to commit!"; #feel free to change me!
   else
     #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-    echo "You've committed today" # "to" $whereCommit #feel free to change me!
+    echo $(sed -n '1  p' < ~/.Message.txt)
+    # echo "You've committed today" # "to" $whereCommit #feel free to change me!
 
 fi
 )
