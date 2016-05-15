@@ -18,46 +18,27 @@ Clone the repository
 
     git clone https://github.com/kassandrasmith/ACommitADay.git ~/.ACommitADay
 
-Edit your .bashrc or .zshrc script using the editor of your choice
-    `gedit .bashrc` or `gedit .zshrc`
-
-add the following line to the end of the file (keeping the parens)
-
-    (cd ~/.ACommitADay/scripts; ./GitCommitTracker.sh;)
-
-save and exit
-
-Make the two main scripts executable:
+cd into the repository and make the setup script executable 
 
     cd ~/.ACommitADay/scripts
-    chmod +x listRepos.sh
-    chmod +x GitCommitTracker.sh
+    chmod +x setup.sh
 
-Run the listRepos to generate a file with all of the git repositories on your machine.
+run the setup script
 
-    ./listRepos.sh
+    ./setup.sh
+    
+Respond as prompted.
 
-:boom: When running listRepos, empty or broken repositories will have a "fatal" warning message. This, along with the path to the "broken" directory will be printed so that you can investigate. If a repository gives a warning message, we ignore it.
 
-
-:boom: For now, you must run listRepos anytime you create a new repository to ensure that it is being properly tracked.
-
-Now a message will pop up everytime you open the terminal letting you know if you've committed!
-
-Changing the Message
+Making Changes
 ---------------------
+If you wish to change the message you see, you can:
 
-The messages can be changed by changing these lines
-````sh
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-echo "You still need to commit!"; #feel free to change me!
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-echo "You've committed today" # "to" $whereCommit #feel free to change me!
+1. (recommended) re-run setup.sh and input the message you'd like to see
+2. Manually update ~/.Message.txt where the first line is the message you'll see if you HAVE committed and the second line is the message you'll see if you HAVE NOT
 
-````
-to your preferred messages. These lines are easily found by either looking for or searching for the consecutive bangs (!!!!) 
-If you want to see where you've committed, remove the comment, to make the line 
 
-    echo "You've committed today" "to" $whereCommit #feel free to change me!
+If you have created a new repository and would like to see if you've committed in it, you have two options.
 
-Only one repo will be shown.
+1. (recommended) Re-run the setup script and when prompted to update the repository directory, say "y"
+2. Manually add the path to RepositoryDirectory.txt
