@@ -15,9 +15,11 @@ chmod +x GitCommitTracker.sh
 echo "Is this your first time running setup? [y/n]:"
 read yesorno
 
-echo $yesorno
+newstring=$(echo "$yesorno" | tr '[:upper:]' '[:lower:]')
+# echo $newstring
 
-if [ "$yesorno" = "y" ]; then
+
+if [ "$newstring" = "y" ]; then
 
 
     cd
@@ -43,7 +45,7 @@ if [ "$yesorno" = "y" ]; then
 
 # echo yes
 
-elif [ "$yesorno" = "n" ]; then
+elif [ "$newstring" = "n" ]; then
 echo
 else
           echo Unexpected input. If this was your first time running, please try again.
