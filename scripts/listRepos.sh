@@ -16,9 +16,8 @@ cd
   # echo "$line";
 #compensate for the .git at the end
   cd ..
-  LOG_DATE=$(git log  -1 -- HEAD --pretty=format:"%cd" --date=short)
+  LOG_DATE=$(git log  -1 -- HEAD --pretty=format:"%cd" --date=short &>/dev/null)
   error=${?}
-#  echo $error
 
   if [[ $error -ne 0 ]]; then
     echo "$data" >> ~/BrokenRepos.txt
