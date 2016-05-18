@@ -1,12 +1,19 @@
 
 #!/bin/bash
-echo "Hello, "$USER".  Please enter the message you would like to see if you HAVE made a commit today  and press [ENTER]:"
+
+echo "Hello, "$USER"."
+
+echo "Please enter your github login e-mail and press [ENTER]"
+read AUTHOR
+
+
+echo "Please enter the message you would like to see if you HAVE made a commit today  and press [ENTER]:"
 read ymessage
 echo $ymessage > ~/.Message.txt
 echo "Please enter the message you would like to see if you HAVE NOT made a commit today and press [ENTER]: "
 read nmessage
 echo $nmessage >> ~/.Message.txt
-
+echo $AUTHOR >> ~/.Message.txt
 chmod +x listRepos.sh
 chmod +x GitCommitTracker.sh
 
