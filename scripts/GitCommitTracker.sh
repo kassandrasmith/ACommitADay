@@ -23,6 +23,9 @@ cd #not necessary, but a safeguard to start at HOME
 
   if [ -z "$LOG_DATE" ]
   then
+     :
+    #do nothing
+  else
 
     if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
@@ -80,7 +83,7 @@ if [ "$committedToday" = false ] ; then
   else
     #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
     echo $(sed -n '1  p' < ~/.Message.txt)
-     echo "You've committed today"  "to" $whereCommit #feel free to change me!
+    # echo "You've committed today"  "to" $whereCommit #feel free to change me!
 
 fi
 )
