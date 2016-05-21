@@ -2,12 +2,7 @@
 committedToday=false;
 #find all git repositories and put them into this text file
 
-  USER=$(sed -n '3p' < ~/.Message.txt)
-  # echo $USER
-# find ~ -name .git -type d -prune 2>/dev/null  > RepositoryDirectory.txt
-#
-# #add globbers for files with a newline
-# awk '{gsub(/ /,"\\ ")}8' RepositoryDirectory.txt > gits.txt
+USER=$(sed -n '3p' < ~/.Message.txt)
 
 #Don't break on whitespaces
 IFS=''
@@ -19,7 +14,7 @@ cd #not necessary, but a safeguard to start at HOME
   cd $data;
   cd .. #compensate for .git at end of line
 
-  LOG_DATE=$(git log --author=kassandrasmith@utexas.edu -1 HEAD --pretty=format:"%cd" --date=short)
+  LOG_DATE=$(git log --author=$USER -1 HEAD --pretty=format:"%cd" --date=short)
 
   if [ -z "$LOG_DATE" ]
   then
