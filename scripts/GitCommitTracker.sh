@@ -1,7 +1,7 @@
 #!/bin/bash
+#Clear flag
 committedToday=false;
-#find all git repositories and put them into this text file
-
+#Get user to search for gits under
 USER=$(sed -n '3p' < ~/.Message.txt)
 
 #Don't break on whitespaces
@@ -13,15 +13,17 @@ do
 cd #not necessary, but a safeguard to start at HOME
   cd $data;
   cd .. #compensate for .git at end of line
-
+#Get the most recent date from the log, checking only for specified user
   LOG_DATE=$(git log --author=$USER -1 HEAD --pretty=format:"%cd" --date=short)
 
+#Compensate for repos where the user hasn't contributed
   if [ -z "$LOG_DATE" ]
   then
      :
     #do nothing
   else
-
+#The repo is the user's and has a commit date
+#Different OS types require different "date" formatting
     if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
               DATE=$(date +%Y-%m-%d) &> /dev/null #Silence date output
