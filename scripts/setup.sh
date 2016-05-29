@@ -28,9 +28,9 @@ echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
 cd
-path=$(find . -name .key -prune 2>/dev/null)
+path=$(find . -name GitCommitTracker.sh -prune 2>/dev/null)
 # echo $path
-newpath=$(echo $path | sed 's/.key//g')
+newpath=$(echo $path | sed 's/GitCommitTracker.sh//g')
 # echo $newpath
 
 case $SHELL in
