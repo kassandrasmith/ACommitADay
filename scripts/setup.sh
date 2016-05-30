@@ -3,6 +3,7 @@
 
 echo "Hello, "$USER"."
 
+scriptDirectoryPath=$(pwd)
 echo "Please enter your github login e-mail and press [ENTER]"
 read AUTHOR
 
@@ -28,20 +29,17 @@ echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
 cd
-path=$(find . -name GitCommitTracker.sh -prune 2>/dev/null)
-# echo $path
-newpath=$(echo $path | sed 's/GitCommitTracker.sh//g')
-# echo $newpath
+
 
 case $SHELL in
 */zsh)
    # assume Zsh
-   echo "(cd $newpath; ./GitCommitTracker.sh;)" >> .zshrc
+   echo "(cd $scriptDirectoryPath; ./GitCommitTracker.sh;)" >> .zshrc
 
    ;;
 */bash)
    # assume Bash
-   echo "(cd $newpath; ./GitCommitTracker.sh;)" >> .bashrc
+   echo "(cd $scriptDirectoryPath; ./GitCommitTracker.sh;)" >> .bashrc
    ;;
 *)
    # assume something else
