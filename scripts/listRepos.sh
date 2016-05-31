@@ -20,15 +20,15 @@ cd
   error=${?}
 
   if [[ $error -ne 0 ]]; then
-    echo "$data" >> ~/BrokenRepos.txt
+    echo "$data" >> ~/.BrokenRepos.txt
     echo $data produced an error and is being ignored
   fi
 
 done
 )
 
-grep -v -x -f ~/BrokenRepos.txt gits.txt > RepositoryDirectory.txt
-rm ~/BrokenRepos.txt
+grep -v -x -f ~/.BrokenRepos.txt gits.txt > RepositoryDirectory.txt
+rm ~/.BrokenRepos.txt
 rm gits.txt
 
 echo All Done! Working repositories listed in RepositoryDirectory.txt
