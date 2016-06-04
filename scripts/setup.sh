@@ -63,7 +63,8 @@ fi
 
 fi
 
-
+if [ ! -z ~/.firsttimerunningflag ]; then
 touch ~/.firsttimerunningflag
+fi
 
 echo done!
